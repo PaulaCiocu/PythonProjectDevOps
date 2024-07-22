@@ -1,0 +1,6 @@
+README.md
+setup.py
+LibrarieProiect.egg-info/PKG-INFO
+LibrarieProiect.egg-info/SOURCES.txt
+LibrarieProiect.egg-info/dependency_links.txt
+LibrarieProiect.egg-info/top_level.txt

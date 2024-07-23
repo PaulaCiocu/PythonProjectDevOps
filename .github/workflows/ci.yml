@@ -13,7 +13,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: see current files
+    - name: see current files in directory
       run: |
         ls -la LibrarieProiect
     - name: Build Docker Image

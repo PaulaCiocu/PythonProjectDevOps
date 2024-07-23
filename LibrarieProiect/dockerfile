@@ -1,0 +1,15 @@
+FROM python:3.11-slim
+
+RUN mkdir -p /app
+
+WORKDIR /app
+
+COPY proiectFinal.py /app/
+COPY test2.txt /app/
+COPY test_1_project1.py /app/
+
+
+CMD [ "python3", "test_1_project1.py"]
+
+
+

@@ -20,4 +20,8 @@ jobs:
       run: |
         docker build -t my_python_tests -f LibrarieProiect/dockerfile .
         
+    - name: Run container docker
+      run: |
+        docker run --rm --name python-container my_python_tests
+        
   

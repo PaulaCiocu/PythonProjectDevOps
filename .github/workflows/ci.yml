@@ -15,7 +15,7 @@ jobs:
 
     - name: see current files
       run: |
-        ls
+        ls -la LibrarieProiect
     - name: Build Docker Image
       run: |
         docker build -t my_python_tests -f LibrarieProiect/dockerfile .

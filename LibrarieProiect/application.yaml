@@ -1,1 +1,13 @@
-apiVersion: v1
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: python-argocd
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://gitlab.com/devops5250825/pythonprojectdev.git
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd

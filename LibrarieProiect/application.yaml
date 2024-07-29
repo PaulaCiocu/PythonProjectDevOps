@@ -1,13 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
-metadata:
-  name: python-argocd
+metadata: 
+  name: python-argocd-deployment
   namespace: argocd
-spec:
+spec: 
   project: default
-  source:
-    repoURL: https://gitlab.com/devops5250825/pythonprojectdev.git
-    targetRevision: HEAD
+  source: 
+    repoURL: "https://github.com/PaulaFarcas/PythonProject"
+    targetRevision: main 
+    path: LibrarieProiect
   destination:
-    server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: auto-selfheal-demo
+    server: "https://kubernetes.default.svc"
+  syncPolicy:
+    automated:
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

@@ -10,3 +10,5 @@ Provide the timestamps for these occurrences
 had the most activities (INFO/ERROR/DEBUG)
 9. Calculate the failure rate percentage for each app type. (Failure rate = (No. of ERROR logs) / (Total logs of that app type) * 100)
 
+
+

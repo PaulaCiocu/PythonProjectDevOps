@@ -7,7 +7,7 @@
 7. Calculate the longest and shortest successful run times across all types of apps (Frontend, Backend, API). 
 Provide the timestamps for these occurrences
 8. Identify the hour of the day (eg., 00:00:00-00:59:00, 01:00:00-01:59:00 etc.) when each app type (Frontend, Backend, API) 
-had the most activities (INFO/ERROR/DEBUG)
+had the most activities  (INFO/ERROR/DEBUG)
 9. Calculate the failure rate percentage for each app type. (Failure rate = (No. of ERROR logs) / (Total logs of that app type) * 100)
 
 

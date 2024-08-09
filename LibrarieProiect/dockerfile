@@ -10,6 +10,3 @@ COPY LibrarieProiect/test_1_project1.py /app/
 
 
 CMD [ "python3", "test_1_project1.py"]
-
-
-

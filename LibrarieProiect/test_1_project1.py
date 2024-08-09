@@ -54,7 +54,6 @@ class Test1(unittest.TestCase):
         self.assertEqual(self.result7[1].get('API'),('17:23:35', 14))
 
     def test_8(self):
-        print(self.result8)
         self.assertEqual(self.result8.get('BackendApp'),('12', 3))
         self.assertEqual(self.result8.get('API'), ('17', 4))
         self.assertEqual(self.result8.get('FrontendApp'),('13', 1))

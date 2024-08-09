@@ -12,6 +12,7 @@ class Test1(unittest.TestCase):
         self.result7= self.__proiect.run_times_per_app("test2.txt")
         self.result8= self.__proiect.busiest_hour_per_app("test2.txt")
         self.result9= self.__proiect.calculate_failure_rates("test2.txt")
+        self.result10= self.__proiect.run_times_per_app("test2.txt")
 
 
     def test_(self):
@@ -62,6 +63,12 @@ class Test1(unittest.TestCase):
         self.assertEqual(self.result9.get('API'), 12.50)
         self.assertEqual(self.result9.get('SYSTEM'), 0.0)
         self.assertEqual(self.result9.get('FrontendApp'), 0.0)
+    
+    def test_10(self):
+        self.assertEqual(self.result10[0].get('BackendApp'),('12:51:24', 20))
+        self.assertEqual(self.result10[0].get('INFO'), ('12:51:24', 22))
+        self.assertEqual(self.result10[1].get('BackendApp'),('12:51:24', 15))
+        self.assertEqual(self.result10[1].get('INFO'),('12:51:24', 14))
 
         
 

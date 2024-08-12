@@ -254,3 +254,70 @@ class Proiect():
                 failure_rates[app] = round(rate,2)
                 
         return failure_rates
+    
+
+proiect = Proiect()
+result = proiect.count("test2.txt")
+print("1")
+# Expected results based on the provided assertions:
+print(f"('ERROR', 'BackendApp'): {result[('ERROR', 'BackendApp')]}")
+print(f"('INFO', 'BackendApp'): {result[('INFO', 'BackendApp')]}")
+print(f"('INFO', 'API'): {result[('INFO', 'API')]}")
+print(f"('DEBUG', 'SYSTEM'): {result[('DEBUG', 'SYSTEM')]}")
+print(f"('ERROR', 'API'): {result[('ERROR', 'API')]}")
+print(f"('DEBUG', 'API'): {result[('DEBUG', 'API')]}")
+print(f"('DEBUG', 'FrontendApp'): {result[('DEBUG', 'FrontendApp')]}")
+
+print("2")
+result2 = proiect.average_run_time_excluding_system("test2.txt")
+
+# Expected results based on the provided assertions:
+print(f"BackendApp: {result2['BackendApp']}")
+print(f"API: {result2['API']}")
+
+print("3")
+result3 = proiect.count_app_failures3("test2.txt")
+
+# Expected results based on the provided assertions:
+print(f"FrontendApp: {result3.get('FrontendApp')}")
+print(f"BackendApp: {result3.get('BackendApp')}")
+print(f"API: {result3.get('API')}")
+print(f"SYSTEM: {result3.get('SYSTEM')}")
+
+result41, result42 = proiect.count_app_failures("test2.txt")
+result51, result52 = proiect.app_with_most_successful_runs("test2.txt")
+result61, result62 = proiect.third_of_day_with_most_failures("test2.txt")
+result7 = proiect.run_times_per_app("test2.txt")
+result8 = proiect.busiest_hour_per_app("test2.txt")
+result9 = proiect.calculate_failure_rates("test2.txt")
+
+print("4")
+print(f"Most failed app: {result41}")
+print(f"Number of failures: {result42}")
+
+print("5")
+print(f"App with most successful runs: {result51}")
+print(f"Number of successful runs: {result52}")
+
+print("6")
+print(f"Third of the day with most failures: {result61}")
+print(f"Number of failures: {result62}")
+
+print("7")
+print(f"Longest run times per app:")
+for app, (timestamp, run_time) in result7[0].items():
+    print(f"  {app}: Longest run - {timestamp} at {run_time}ms")
+print(f"Shortest run times per app:")
+for app, (timestamp, run_time) in result7[1].items():
+    print(f"  {app}: Shortest run - {timestamp} at {run_time}ms")
+
+print("8")
+print(f"Busiest hour per app:")
+for app, (hour, count) in result8.items():
+    print(f"  {app}: Busiest hour - {hour}:00 with {count} activities")
+
+print("9")
+print(f"Failure rates per app:")
+for app, rate in result9.items():
+    print(f"  {app}: Failure rate - {rate}%")
+

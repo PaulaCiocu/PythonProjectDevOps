@@ -21,6 +21,9 @@ spec:
           limits:
             cpu: "1000m"
             memory: "1024Mi"
+          requests:
+            cpu: '0.5'
+            memory: 0.5Gi
         command: ["/bin/sh", "-c", "python3 test_1_project1.py; while true; do sleep 3600; done"]
 
      

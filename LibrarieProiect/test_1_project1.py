@@ -20,7 +20,7 @@ class Test1(unittest.TestCase):
         self.assertEqual(self.result[('ERROR', 'BackendApp')],1)
         self.assertEqual(self.result[('INFO', 'BackendApp')],4.5)
         self.assertEqual(self.result[('INFO', 'API')],3)
-        self.assertEqual(self.result[('DEBUG', 'SYSTEM')],1)
+        self.assertEqual(self.result[('DEBUG', 'SYSTEM')],2)
         self.assertEqual(self.result[('ERROR', 'API')],2)
         self.assertEqual(self.result[('DEBUG', 'API')],1)
         self.assertEqual(self.result[('DEBUG', 'FrontendApp')],2)

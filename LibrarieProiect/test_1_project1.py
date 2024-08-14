@@ -21,7 +21,7 @@ class Test1(unittest.TestCase):
         self.assertEqual(self.result[('INFO', 'BackendApp')],4.5)
         self.assertEqual(self.result[('INFO', 'API')],3)
         self.assertEqual(self.result[('DEBUG', 'SYSTEM')],1)
-        self.assertEqual(self.result[('ERROR', 'API')],1)
+        self.assertEqual(self.result[('ERROR', 'API')],2)
         self.assertEqual(self.result[('DEBUG', 'API')],1)
         self.assertEqual(self.result[('DEBUG', 'FrontendApp')],2)
     
@@ -32,20 +32,20 @@ class Test1(unittest.TestCase):
     def test_3(self):
         self.assertEqual(self.result3.get('FrontendApp'), 0)
         self.assertEqual(self.result3.get('BackendApp'),1)
-        self.assertEqual(self.result3.get('API'),1)
+        self.assertEqual(self.result3.get('API'),2)
         self.assertEqual(self.result3.get('SYSTEM'),0)
 
     def test_4(self):
-        self.assertEqual(self.result41,"BackendApp")
-        self.assertEqual(self.result42,1)
+        self.assertEqual(self.result41,"API")
+        self.assertEqual(self.result42,2)
 
     def test_5(self):
         self.assertEqual(self.result51,"BackendApp")
         self.assertEqual(self.result52,5)
 
     def test_6(self):
-        self.assertEqual(self.result61,'00:00:00 - 07:59:59')
-        self.assertEqual(self.result62,1)
+        self.assertEqual(self.result61,'08:00:00 - 15:59:59')
+        self.assertEqual(self.result62,2)
     
     def test_7(self):
         self.assertEqual(self.result7[0].get('BackendApp'),('12:26:42', 18))
@@ -61,7 +61,7 @@ class Test1(unittest.TestCase):
     
     def test_9(self):    
         self.assertEqual(self.result9.get('BackendApp'), 10.0)
-        self.assertEqual(self.result9.get('API'), 12.50)
+        self.assertEqual(self.result9.get('API'), 22.22)
         self.assertEqual(self.result9.get('SYSTEM'), 0.0)
         self.assertEqual(self.result9.get('FrontendApp'), 0.0)
     

@@ -19,8 +19,8 @@ spec:
         - containerPort: 5000
         resources:
           limits:
-            cpu: "500m"
-            memory: "512Mi"
+            cpu: "1000m"
+            memory: "1024Mi"
         command: ["/bin/sh", "-c", "python3 test_1_project1.py; while true; do sleep 3600; done"]
 
      

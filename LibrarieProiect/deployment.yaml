@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: cd-deployment
-        image: paula1907/my_python_tests:1
+        image: paula1907/my_python_tests:3
         ports:
         - containerPort: 5000
         resources:

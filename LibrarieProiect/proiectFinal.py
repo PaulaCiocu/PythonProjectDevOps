@@ -321,3 +321,15 @@ print(f"Failure rates per app:")
 for app, rate in result9.items():
     print(f"  {app}: Failure rate - {rate}%")
 
+result10 = proiect.run_times_per_app("test2.txt")
+print("10")
+# Print the longest run times per app (corresponds to result10[0])
+print(f"Longest run times per app:")
+for app, (timestamp, run_time) in result10[0].items():
+    print(f"  {app}: Longest run - {timestamp} at {run_time}ms")
+
+# Print the shortest run times per app (corresponds to result10[1])
+print(f"Shortest run times per app:")
+for app, (timestamp, run_time) in result10[1].items():
+    print(f"  {app}: Shortest run - {timestamp} at {run_time}ms")
+
